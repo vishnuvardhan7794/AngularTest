@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { EmitvaluesService } from './services/emitvalues.service';
-
+import { Machine} from './services/Machine'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +12,10 @@ export class AppComponent {
   subscription: Subscription;
   isStarted = false;
   constructor(public emitvaluesService: EmitvaluesService) {
+    let myMachine=new Machine(4,'crane');
+    console.log('myMachine.isDark',myMachine.isDark('red'));
+    console.log('myMachine.description',myMachine.description);
+    console.log('myMachine.description',myMachine.trimColor);
   }
   startemission() {
     if (this.isStarted == true) {
