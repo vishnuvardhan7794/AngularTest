@@ -9,7 +9,8 @@ export class EmitvaluesService {
   startAlphebets = 64;
   mainCount = 0;
   isPause = false;
-  constructor() { }
+  constructor() {
+  }
 
   startEmission() {
     let self = this;
